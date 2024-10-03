@@ -1,0 +1,23 @@
+/* components/HeaderImage.module.css */
+.headerContainer {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    /* Adjust the height based on your needs, e.g., 60% of viewport height */
+    max-height: 1080px;
+    /* Ensure it doesn't get too tall on larger screens */
+}
+
+@media (max-width: 768px) {
+    .headerContainer {
+        height: 40vh;
+        /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .headerContainer {
+        height: 30vh;
+        /* Adjust for mobile phones */
+    }
+}

@@ -9,22 +9,16 @@ import { ProjectItem } from "@/components/project";
 import { homePageConfig, projectPageConfig } from "@/config";
 import { shimmer, toBase64 } from "@/lib/utils";
 import Image from "next/image";
-import ScrollVideo from "../components/main/ScrollVideo";
+import HeaderImage from '../components/main/HeaderImage';
 
 const HomePage = async () => (
-  <>
+    <>
     <MainHeader />
     <MainContainer>
       <MainGrid>
         <Main>
           {" "}
-          <main>
-            <ScrollVideo
-              videoSrc="/video/main.mp4"
-              frameRate={60}
-              framesToMove={20}
-            />
-          </main>
+          <HeaderImage />
           <div className="mx-auto mb-4 text-center">
             <Image
               src={homePageConfig.profileImage ?? ""}

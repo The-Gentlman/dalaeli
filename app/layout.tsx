@@ -1,5 +1,5 @@
 import "@/styles/tailwind.css";
-import { MainWrapper, ThemeProvider, TwIndicator } from "@/components/main";
+import { MainWrapper, ThemeProvider } from "@/components/main";
 import { metaConfig } from "@/config";
 import { cn, constructOgImageUri, getUrl } from "@/lib/utils";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
@@ -169,7 +169,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {children}
           <Toaster position="top-center" />
           <VercelAnalytics />
-          <TwIndicator />
         </MainWrapper>
         {/* </ThemeProvider> */}
       </body>
