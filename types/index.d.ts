@@ -73,3 +73,8 @@ export type PostType = {
   tags: Array<string>;
   content: string;
 };
+
+export type HomePostType = {
+  title?: string;
+  body?: string;
+};

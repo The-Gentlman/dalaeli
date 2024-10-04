@@ -9,9 +9,9 @@ import { ProjectItem } from "@/components/project";
 import { homePageConfig, projectPageConfig } from "@/config";
 import { shimmer, toBase64 } from "@/lib/utils";
 import Image from "next/image";
-import HeaderImage from '../components/main/HeaderImage';
-import Logos from "../components/main/Logos";
-
+import HeaderImage from '@/components/main/HeaderImage';
+import Logos from "@/components/main/Logos";
+import HomePosts from "@/components/main/HomePosts";
 const HomePage = async () => (
     <>
     <MainHeader />
@@ -20,14 +20,7 @@ const HomePage = async () => (
         <Main>
           {" "}
           <HeaderImage />
-          <div>
-            At iQTEL, we deliver innovative and reliable telecommunication solutions tailored to your needs.
-            With over 15 years of experience serving both residential and commercial clients,
-            we provide around-the-clock support to keep you connected, no matter the time or place. 
-            Our commitment to customer satisfaction, backed by industry-leading certifications and safety standards, 
-            ensures that every project is handled with precision and care. 
-            Trust iQTEL for seamless connectivity and exceptional service.
-          </div>
+          <HomePosts />
           <Logos />
           <div className="mx-auto mb-4 text-center">
             <Image
