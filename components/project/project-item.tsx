@@ -20,7 +20,6 @@ const ProjectItem: FC<ProjectItemProps> = ({ project, isLastItem }) => {
     <>
       <div className="mx-auto max-w-5xl px-4 sm:px-8">
         {/* Body */}
-        <ProjectItemDate year={formatDate(project.date)} />
         <ProjectItemVerticalLine />
         <ProjectItemBrowser key={v4()}>
           <ProjectItemContainer>

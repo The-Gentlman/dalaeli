@@ -13,7 +13,6 @@ export type ProjectItemType = {
   screenShotUrl: string;
   screenShotDescription: string;
   type: string;
-  date: string;
   techStacks: ProjectItemTechStack[];
   keywords: string[];
 };

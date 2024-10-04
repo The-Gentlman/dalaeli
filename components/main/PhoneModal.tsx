@@ -10,13 +10,13 @@ const PhoneModal: React.FC = () => {
 
   return (
     <div>
-      {/* Button with Phone SVG */}
+      {/* Button with Your Phone SVG */}
       <button onClick={toggleModal} className="open-modal-button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlSpace="preserve"
-          width="40" // Adjust width for better visibility
-          height="40" // Adjust height for better visibility
+          width="40"
+          height="40"
           style={{
             shapeRendering: "geometricPrecision",
             textRendering: "geometricPrecision",
@@ -55,7 +55,7 @@ const PhoneModal: React.FC = () => {
         </svg>
       </button>
 
-
+      {/* Modal */}
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -69,7 +69,6 @@ const PhoneModal: React.FC = () => {
           </div>
         </div>
       )}
-
       <style jsx>{`
         .open-modal-button {
           position: fixed;
@@ -81,15 +80,31 @@ const PhoneModal: React.FC = () => {
           width: 50px;
           height: 50px;
           cursor: pointer;
-          z-index: 9999; 
+          z-index: 9999;
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: transform 0.3s ease; /* For smooth hover transition */
         }
-        .w-6 {
-          width: 24px;
-          height: 24px;
+
+        /* Hover Animation */
+        .open-modal-button:hover {
+          animation: ring-animation 1.5s infinite;
+          transform: scale(1.05); /* Slightly enlarges the button */
         }
+
+        @keyframes ring-animation {
+          0% {
+            box-shadow: 0 0 0 0 rgba(255, 110, 64, 0.4);
+          }
+          70% {
+            box-shadow: 0 0 0 10px rgba(255, 110, 64, 0);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(255, 110, 64, 0);
+          }
+        }
+
         .modal-overlay {
           position: fixed;
           top: 0;
@@ -102,12 +117,14 @@ const PhoneModal: React.FC = () => {
           align-items: center;
           z-index: 10000;
         }
+
         .modal-content {
           background-color: white;
-          padding: 20px 100px;
+          padding: 20px;
           border-radius: 8px;
           text-align: center;
         }
+
         .phone-number {
           color: #0070f3;
           font-size: 18px;
@@ -115,6 +132,7 @@ const PhoneModal: React.FC = () => {
           margin-top: 10px;
           text-decoration: none;
         }
+
         .close-modal-button {
           margin-top: 15px;
           padding: 5px 10px;
