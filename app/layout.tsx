@@ -27,7 +27,7 @@ const calSans = localFont({
 export const metadata: Metadata = {
   title: {
     default: metaConfig.title,
-    template: "%s | Portfolio",
+    template: "%s | IQTEL",
   },
   generator: metaConfig.author.name,
   applicationName: metaConfig.title,

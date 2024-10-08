@@ -6,6 +6,7 @@ import { MobileMenuButton, MobileNav } from "@/components/navigations/mobile";
 import menus from "@/config/menu";
 import { Disclosure } from "@headlessui/react";
 import { usePathname } from "next/navigation";
+import React from "react";
 import { Fragment } from "react";
 
 const MainHeader = () => {
@@ -16,30 +17,19 @@ const MainHeader = () => {
       <Disclosure>
         {({ open }) => (
           <>
-            <nav className="mx-auto flex max-w-5xl items-center justify-between px-2 py-4">
-              {/* Logo */}
+            <nav className="relative flex h-16 items-center justify-between px-10">
               <div className="flex flex-1 justify-start pl-2">
                 <Logo />
               </div>
-
-              {/* Navigation */}
               <div>
                 <div className="hidden gap-x-6 sm:flex sm:flex-1">
                   <DesktopNav menus={menus} />
-                </div>
               </div>
-
-              {/* Dark Mode */}
-              {/* <div className="hidden justify-end md:flex md:flex-1">
-                <Toggle />
-              </div> */}
-              {/* Mobile Menu */}
-              <div className="flex flex-1 justify-end pr-2 md:hidden">
+              </div>
+                <div className="flex flex-1 justify-end pr-2 md:hidden">
                 <MobileMenuButton open={open} />
               </div>
             </nav>
-
-            {/* <!-- Mobile Navigation --> */}
             <MobileNav fragment={Fragment} menus={menus} />
           </>
         )}

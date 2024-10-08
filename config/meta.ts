@@ -2,7 +2,7 @@ import { MetaType } from "types";
 
 const metaConfig: MetaType = {
   title: "iQTEL",
-  ogTitle: "iQTEL",
+  ogTitle: "https://mrtelco.com/isp-list",
   author: {
     name: "Mohammad",
     twitterUrl: "https://twitter.com/timtbdev",

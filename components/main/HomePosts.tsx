@@ -5,11 +5,11 @@ import styles from "../styles/HomePosts.module.css"; // Import the styles
 
 const HomePosts = () => {
   return (
-    <div className={styles.homePosts}> {/* Use the imported styles */}
+    <div className={styles.post}> {/* Use the imported styles */}
       {Homeposts.map((post: HomePostType, index: number) => (
         <div key={index} className={styles.post}>
-          {post.title && <h2 className={styles.postTitle}>{post.title}</h2>}
-          <p className={styles.postBody}>{post.body}</p>
+          {post.title && <h2 className={styles.post_title}>{post.title}</h2>}
+          <p className={styles.post_body}>{post.body}</p>
         </div>
       ))}
     </div>

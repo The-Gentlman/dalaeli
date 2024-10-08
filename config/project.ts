@@ -3,9 +3,9 @@ import { ProjectItemType } from "@/types";
 const projectPageConfig: ProjectItemType[] = [
   {
     title: "Radio",
-    iconUrl: "/images/projects/fullstack-blog-app/icon.png",
+    iconUrl: "/images/authors/logo.png",
     iconDescription: "Connected Radios",
-    screenShotUrl: "/images/projects/fullstack-blog-app/screen.png",
+    screenShotUrl: "/images/projects/ourjob.jpg",
     screenShotDescription: "Radio",
     type: "Radio",
     keywords: ["Repairs", "Analysis", "Installation"],

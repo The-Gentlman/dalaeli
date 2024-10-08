@@ -4,7 +4,8 @@ const aboutPageConfig: AboutPageType = {
   title: "What is iQTEL?",
   description:
     "Welcome to iQTEL, a 100% Australian-owned telecommunications company with over 15 years of experience delivering comprehensive telecom solutions to both residential and commercial customers. We pride ourselves on providing 24/7, year-round support, ensuring that your business stays connected no matter what.",
-  profileImageUrl: "/images/pages/about/about-01.jpg",
+    // profileImageUrl: "/images/pages/about/about-01.jpg",
+  profileImageUrl: "/images/main1.png",
   profileImageDescription: "Profile image",
   profileImageCaption: "",
   date: "2023-05-01",

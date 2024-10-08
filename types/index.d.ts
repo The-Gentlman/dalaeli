@@ -44,7 +44,7 @@ export type MenuType = {
 };
 
 export type FooterType = {
-  socials: SocialType[];
+  // socials: SocialType[];
   copyright: string;
 };
 
@@ -62,6 +62,14 @@ export type MetaType = {
   tags: Array<string>;
 };
 
+export type Services = {
+  id: string;
+  title: string;
+  description?: string;
+  imageUrl: string;
+  category: string[];
+};
+
 export type PostType = {
   id: string;
   title: string;
@@ -71,7 +79,7 @@ export type PostType = {
   imageDescription: string;
   category: string;
   tags: Array<string>;
-  content: string;
+  content: Services[];
 };
 
 export type HomePostType = {

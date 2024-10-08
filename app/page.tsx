@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Main,
   MainContainer,
@@ -17,25 +19,22 @@ const HomePage = async () => (
     <MainHeader />
     <MainContainer>
       <MainGrid>
+      <HeaderImage />
         <Main>
           {" "}
-          <HeaderImage />
-          <HomePosts />
-          <Logos />
           <div className="mx-auto mb-4 text-center">
-            <Image
-              src={homePageConfig.profileImage ?? ""}
-              alt={homePageConfig.profileImageDescription ?? ""}
-              width={96}
-              height={96}
-              placeholder={`data:image/svg+xml;base64,${toBase64(
-                shimmer(256, 256),
-              )}`}
-              className="mx-auto mb-2 rounded-full bg-gray-100 shadow-sm shadow-gray-800/50 ring-1 ring-gray-900/5  dark:bg-neutral-800/90 dark:ring-white/10"
-              priority={true}
-            />
-
-            <h1 className="mb-2 text-balance font-calsans text-4xl tracking-tight text-slate-900 dark:text-slate-100">
+          <Image
+            src={homePageConfig.profileImage ?? ""}
+            alt={homePageConfig.profileImageDescription ?? ""}
+            width={100}
+            height={100}
+            placeholder={`data:image/svg+xml;base64,${toBase64(
+              shimmer(256, 256),
+            )}`}
+            className="mx-auto mb-2 rounded-full bg-white shadow-md ring-1 ring-gray-200 dark:bg-neutral-800/80 dark:ring-gray-600"
+            priority={true}
+          />
+            <h1 className="mb-2 text-balance font-calsans text-3xl font-light text-slate-900 dark:text-slate-100">
               {homePageConfig.title}
             </h1>
 
@@ -45,10 +44,12 @@ const HomePage = async () => (
           </div>
           {projectPageConfig.map((project, idx) => (
             <ProjectItem
-              project={project}
-              isLastItem={idx === projectPageConfig.length - 1}
+            project={project}
+            isLastItem={idx === projectPageConfig.length - 1}
             />
           ))}
+          <Logos />
+          <HomePosts />
         </Main>
       </MainGrid>
     </MainContainer>
