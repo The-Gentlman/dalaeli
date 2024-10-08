@@ -92,7 +92,7 @@ category: ["Commercial", "Fiber"],
 id: "13",
 title: "External Fibre Run",
 description: "Need an external fibre network? iQTEL provides external fibre run services, ensuring your fibre optic cabling is installed and maintained with precision and care.",
-imageUrl: "/images/blogs/blog-post-1.jpg",
+imageUrl: "/images/main1.png",
 category: ["Commercial", "Fiber"],
 },
 {

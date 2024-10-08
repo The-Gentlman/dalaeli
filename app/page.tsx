@@ -31,13 +31,13 @@ const HomePage = async () => (
             placeholder={`data:image/svg+xml;base64,${toBase64(
               shimmer(256, 256),
             )}`}
-            className="mx-auto mb-2 rounded-full bg-white shadow-md ring-1 ring-gray-200 dark:bg-neutral-800/80 dark:ring-gray-600"
+            className="mx-auto mb-2 rounded-full bg-white shadow-md ring-1 ring-gray-200 dark:bg-neutral-800/80 dark:ring-gray-600 px-3"
             priority={true}
           />
-            <h1 className="mb-2 text-balance font-calsans text-3xl font-light text-slate-900 dark:text-slate-100">
+            <h1 className="mb-2 text-balance font-calsans text-3xl font-light text-slate-900 dark:text-slate-100 my-10">
               {homePageConfig.title}
             </h1>
-
+            <h2></h2>
             <span className="text-balance text-lg leading-8 text-slate-600 dark:text-slate-500">
               {homePageConfig.subTitle}
             </span>

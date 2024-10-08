@@ -1,0 +1,17 @@
+@keyframes lineFade {
+    0% {
+        opacity: .03;
+    }
+
+    50% {
+        opacity: .10;
+    }
+
+    100% {
+        opacity: .03;
+    }
+}
+
+.line-animation {
+    animation: lineFade 4s ease-in-out infinite;
+}

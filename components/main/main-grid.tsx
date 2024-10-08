@@ -1,4 +1,5 @@
 import React, { FC } from "react"
+import "../styles/MainGrid.css"
 
 interface MainGridProps {
   children: React.ReactNode
@@ -9,7 +10,7 @@ const MainGrid: FC<MainGridProps> = ({ children }) => {
     <>
       <div className="relative isolate">
         <svg
-          className="absolute inset-0 -z-10 h-full w-full stroke-black/5 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] dark:stroke-slate-700/20"
+          className="absolute inset-0 -z-10 h-full w-full stroke-black line-animation [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] dark:stroke-slate-700/20"
           aria-hidden="true"
         >
           <defs>
@@ -37,4 +38,4 @@ const MainGrid: FC<MainGridProps> = ({ children }) => {
   )
 }
 
-export default MainGrid
+export default MainGrid;
