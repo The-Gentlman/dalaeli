@@ -13,6 +13,7 @@ import {
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import { v4 } from "uuid";
 
 export const metadata: Metadata = {
@@ -42,8 +43,8 @@ export const metadata: Metadata = {
 const BlogPage = async () => {
   return (
     <>
-      <div className="mx-auto max-w-5xl">
-        <div className="relative mx-auto max-w-4xl px-6">
+      <div className="mx-auto max-w-5xl h-lvh">
+        <div className="relative mx-auto max-w-4xl px-6 ">
           <span className="mb-4 block text-balance text-center text-lg leading-8 text-slate-600 dark:text-slate-500 "></span>
           <div className="flex flex-wrap gap-4 justify-center ">
             {posts.map((post) => (
@@ -56,7 +57,7 @@ const BlogPage = async () => {
                   <div className="group mx-auto p-5">
                     <Link
                       href={`blog/${post.slug}`}
-                      className="relative isolate flex flex-col gap-8"
+                      className="relative isolate flex flex-col gap-8 "
                     >
                       <div className="relative aspect-[16/9] sm:aspect-[2/1]">
                         <Image
@@ -80,9 +81,6 @@ const BlogPage = async () => {
                           <p className="mt-5 text-sm leading-6 text-slate-600">
                             {post.description}
                           </p>
-                        </div>
-                        <div className="mt-6 flex border-t border-black/5 pt-6 dark:border-white/10">
-                          <small>something small for this</small>
                         </div>
                       </div>
                     </Link>

@@ -48,8 +48,8 @@ const ContactForm = () => {
     resolver: zodResolver(contactFormSchema),
     defaultValues,
   })
-
   async function onSubmit(data: ContactFormValues) {
+    console.log(data)
     try {
       setIsLoading(true)
       // Send email using Nodemailer

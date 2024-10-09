@@ -3,10 +3,11 @@ import { metaConfig } from "@/config";
 import ContactPageConfig from "@/config/contact";
 import { constructOgImageUri, getUrl } from "@/lib/utils";
 import { Metadata } from "next";
+import React from "react";
 import { v4 } from "uuid";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact us",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -27,21 +28,7 @@ export const metadata: Metadata = {
         alt: metaConfig.title,
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: metaConfig.ogTitle,
-    description: metaConfig.description,
-    images: [
-      constructOgImageUri(
-        metaConfig.ogTitle,
-        "Contact",
-        metaConfig.tags,
-        "/contact",
-      ),
-    ],
-    creator: metaConfig.author.twitterAddress,
-  },
+  }
 };
 
 const ContactPage = () => {

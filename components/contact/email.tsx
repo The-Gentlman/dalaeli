@@ -26,7 +26,7 @@ const Email: FC<EmailProps> = ({ name, email, message }) => {
               You got a message!
             </Heading>
             <Text className="text-[14px] leading-[24px] text-black">
-              Hello Tim,
+              Hello MR Dalaeli,
             </Text>
             <Text className="text-[14px] leading-[24px] text-black">
               You got an email from <strong>{name}</strong>. Their email is{" "}

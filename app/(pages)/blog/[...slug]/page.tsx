@@ -106,9 +106,6 @@ export default async function PostPage({ params }: PostPageProps) {
               className="object-cover transition-all duration-300 ease-in-out rounded-2xl hover:rounded-lg"
             />
           </div>
-          <figcaption className="mt-2 text-sm text-slate-400 dark:text-slate-500 text-center">
-            {post.imageDescription}
-          </figcaption>
         </div>
 
         {/* Pass filtered services to client-side component */}
