@@ -57,9 +57,9 @@ export default function ClientPostPage({
               />
             </div>
             <div className="flex-1 flex flex-col justify-center">
-              <h2 className="text-base font-semibold mb-1">{service.title}</h2>
+              <h2 className="text-base font-semibold mb-2">{service.title}</h2>
               {service.description && (
-                <p className="text-sm text-slate-600 dark:text-slate-400 text-justify">
+                <p className="text-sm text-slate-600 dark:text-slate-400 text-justify ml-1">
                   {service.description}
                 </p>
               )}
