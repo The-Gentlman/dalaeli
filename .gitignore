@@ -10,7 +10,8 @@
 
 # testing
 /coverage
-
+package-lock.json
+yarn.lock
 # next.js
 /.next/
 /out/
