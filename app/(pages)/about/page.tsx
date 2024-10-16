@@ -2,6 +2,7 @@ import { aboutPageConfig, metaConfig } from "@/config";
 import { constructOgImageUri, getUrl } from "@/lib/utils";
 import { Metadata } from "next";
 import Image from "next/image";
+import React from "react";
 import { v4 } from "uuid";
 
 export const metadata: Metadata = {
@@ -26,21 +27,7 @@ export const metadata: Metadata = {
         alt: metaConfig.title,
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: metaConfig.ogTitle,
-    description: metaConfig.description,
-    images: [
-      constructOgImageUri(
-        metaConfig.ogTitle,
-        "About",
-        metaConfig.tags,
-        "/about",
-      ),
-    ],
-    creator: metaConfig.author.twitterAddress,
-  },
+  }
 };
 
 const AboutPage = async () => {
@@ -51,7 +38,7 @@ const AboutPage = async () => {
           <div className="scroll-m-20 border-b pb-1 text-3xl font-semibold tracking-tight first:mt-0">
             {aboutPageConfig.title}
           </div>
-          <div className="mt-4 text-wrap text-lg leading-8 text-slate-600 dark:text-slate-400">
+          <div className="mt-4 text-wrap text-lg leading-8 text-slate-600 dark:text-slate-400 text-justify">
             {aboutPageConfig.description}
           </div>
           {/* Profile Image */}
@@ -74,7 +61,7 @@ const AboutPage = async () => {
               <div className="scroll-m-20 border-b pb-1 text-3xl font-semibold tracking-tight first:mt-0">
                 {section.title}
               </div>
-              <div className="mt-4 text-wrap text-lg leading-8 text-slate-600 dark:text-slate-400">
+              <div className="mt-4 text-wrap text-lg leading-8 text-slate-600 dark:text-slate-400 text-justify">
                 {section.description}
               </div>
             </div>

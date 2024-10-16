@@ -6,10 +6,6 @@ import {
   shimmer,
   toBase64,
 } from "@/lib/utils";
-import {
-  CalendarDaysIcon as DateIcon,
-  ClockIcon as TimeIcon,
-} from "@heroicons/react/24/outline";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -78,7 +74,7 @@ const BlogPage = async () => {
                           <h3 className="mt-3 text-lg font-semibold leading-6 text-slate-900 dark:text-slate-400">
                             {post.title}
                           </h3>
-                          <p className="mt-5 text-sm leading-6 text-slate-600">
+                          <p className="mt-5 text-sm leading-6 text-slate-600 text-justify text-justify">
                             {post.description}
                           </p>
                         </div>

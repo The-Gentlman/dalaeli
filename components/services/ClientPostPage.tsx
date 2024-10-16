@@ -46,7 +46,7 @@ export default function ClientPostPage({
         {servicesByCategory[activeCategory].map((service) => (
           <div
             key={service.id}
-            className="my-6 p-4 border rounded-lg border-slate-200 dark:border-slate-700 shadow-md flex items-center hover:scale-105 hover:shadow-xl transition-transform duration-300 ease-in-out"
+            className="my-6 p-4 border rounded-lg border-slate-200 dark:border-slate-700 shadow-md flex items-center hover:scale-110 hover:shadow-xl transition-transform duration-300 ease-in-out"
           >
             <div className="sticky w-20 h-20 mr-4 flex-shrink-0 flex justify-center items-center">
               <Image
@@ -59,7 +59,7 @@ export default function ClientPostPage({
             <div className="flex-1 flex flex-col justify-center">
               <h2 className="text-base font-semibold mb-1">{service.title}</h2>
               {service.description && (
-                <p className="text-sm text-slate-600 dark:text-slate-400">
+                <p className="text-sm text-slate-600 dark:text-slate-400 text-justify">
                   {service.description}
                 </p>
               )}

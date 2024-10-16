@@ -20,7 +20,9 @@ const HomePage = async () => (
     <MainContainer>
       <MainGrid>
       <HeaderImage />
+
         <Main>
+          <Logos />
           {" "}
           <div className="mx-auto mb-4 text-center">
           <Image
@@ -48,7 +50,6 @@ const HomePage = async () => (
             isLastItem={idx === projectPageConfig.length - 1}
             />
           ))}
-          <Logos />
           <HomePosts />
         </Main>
       </MainGrid>

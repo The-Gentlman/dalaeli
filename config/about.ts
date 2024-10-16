@@ -11,7 +11,7 @@ const aboutPageConfig: AboutPageType = {
   date: "2023-05-01",
   content: [
     {
-      title: "What is out goal?",
+      title: "What is our goal?",
       description:
         "At iQTEL, customer satisfaction is at the core of everything we do. We are committed to delivering services with a 100% satisfaction guarantee. Our wide range of certifications and licenses, including $20 million in public liability coverage and full WorkCover insurance, empower us to handle diverse and complex projects with confidence and safety.",
     },

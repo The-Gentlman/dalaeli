@@ -57,7 +57,7 @@ export type SocialType = {
 export type MetaType = {
   title: string;
   ogTitle: string;
-  author: { name: string; twitterUrl: string; twitterAddress: string };
+  author: { name: string; };
   description: string;
   tags: Array<string>;
 };
