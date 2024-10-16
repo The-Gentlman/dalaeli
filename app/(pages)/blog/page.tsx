@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 const BlogPage = async () => {
   return (
     <>
-      <div className="mx-auto max-w-5xl h-lvh">
+      <div className="mx-auto max-w-5xl place-content-center">
         <div className="relative mx-auto max-w-4xl px-6 ">
           <span className="mb-4 block text-balance text-center text-lg leading-8 text-slate-600 dark:text-slate-500 "></span>
           <div className="flex flex-wrap gap-4 justify-center ">
@@ -69,14 +69,11 @@ const BlogPage = async () => {
                         />
                         <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
                       </div>
-                      <div>
-                        <div className="group relative max-w-xl">
+                      <div className="flex justify-center items-baseline gap-4">
+                        <div className="group flex justify-center relative max-w-xl min-h-28 m-0">
                           <h3 className="mt-3 text-lg font-semibold leading-6 text-slate-900 dark:text-slate-400">
                             {post.title}
                           </h3>
-                          <p className="mt-5 text-sm leading-6 text-slate-600 text-justify text-justify">
-                            {post.description}
-                          </p>
                         </div>
                       </div>
                     </Link>
