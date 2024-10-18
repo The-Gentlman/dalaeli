@@ -32,6 +32,7 @@ return (
             width={100}
             height={100}
             className={styles.logoImage}
+            loading="lazy"
         />
         </div>
     ))}

@@ -5,18 +5,20 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    white-space: nowrap;
     padding: 20px;
     width: 100%;
 }
 
 .scrollWrapper {
-    display: inline-flex;
-    animation: scroll 30s linear infinite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content; /* Dynamically adjust width to content */
+    animation: scroll 60s linear infinite; /* Adjusted slower scroll */
 }
 
 .logoWrapper {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 30px;
@@ -24,25 +26,20 @@
 
 .logoImage {
     max-width: 100px;
-    /*Limitslogosize*/max-height: 100px;
-    /*Limitslogoheight*/transition: transform 0.3s ease;
-    -webkit-transition: transform 0.3s ease;
-    -moz-transition: transform 0.3s ease;
-    -ms-transition: transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
+    max-height: 100px;
+    transition: transform 0.3s ease;
 }
 
 .logoImage:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 @keyframes scroll {
-    from {
-        transform: translateX(0);
+    0% {
+        transform: translateX(0); /* Start from the left */
     }
-
-    to {
-        transform: translateX(-50%);
+    100% {
+        transform: translateX(-50%); /* Scroll halfway to the end */
     }
 }
 
