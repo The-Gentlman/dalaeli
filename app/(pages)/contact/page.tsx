@@ -46,7 +46,6 @@ const ContactPage = () => {
           </div>
         ))}
       </div>
-      ;
       <div className="mx-auto max-w-5xl">
         <div className="relative mx-auto max-w-4xl px-6 py-4">
           <ContactForm />
