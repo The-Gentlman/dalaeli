@@ -85,7 +85,6 @@ export default async function PostPage({ params }: PostPageProps) {
     servicesByCategory["All"] = post.content; 
   }
 
-  // Get category names, excluding empty categories
   const categories = Object.keys(servicesByCategory).filter(
     (category) => servicesByCategory[category].length > 0
   );
@@ -107,7 +106,6 @@ export default async function PostPage({ params }: PostPageProps) {
             />
           </div>
         </div>
-
         {/* Pass filtered services to client-side component */}
         <ClientPostPage servicesByCategory={servicesByCategory} categories={categories} />
       </div>
