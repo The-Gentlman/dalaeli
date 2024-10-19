@@ -2,7 +2,7 @@ import { ProjectItemType } from "@/types";
 
 const projectPageConfig: ProjectItemType[] = [
   {
-    title: "Radio",
+    title: "",
     iconUrl: "/images/authors/logo.png",
     iconDescription: "Connected Radios",
     screenShotUrl: "/images/projects/ourjob.jpg",
@@ -11,19 +11,19 @@ const projectPageConfig: ProjectItemType[] = [
     keywords: ["Repairs", "Analysis", "Installation"],
     techStacks: [
       {
-        title: "Others",
+        title: "Services",
         stacks: ["Maintenance", "router", "Server"],
       },
       {
-        title: "Others",
+        title: "Sulgon",
         stacks: [
-          "some simple text to explain this others or something new.this is just a sample test for this area"
+          "iQTEL – Connecting You with Reliability, Expertise, and Innovation."
         ],
       },
       {
-        title: "Others",
+        title: "Isp List",
         stacks: [
-          "some simple text to explain this others or something new.this is just a sample test for this area"
+          "Click to See our Isp List (Temproary disable)"
         ],
       },
     ],
