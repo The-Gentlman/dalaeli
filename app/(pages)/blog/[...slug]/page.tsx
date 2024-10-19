@@ -92,19 +92,10 @@ export default async function PostPage({ params }: PostPageProps) {
   return (
     <div className="flex flex-col items-center max-w-7xl mx-auto relative">
       <div className="relative w-full max-w-4xl px-6 mt-8">
-        <div className="relative mx-auto w-full rounded-2xl bg-white shadow-md ring-1 ring-black/5 dark:bg-slate-800 dark:ring-white/10 mb-12">
-          <h1 className="mx-auto p-6 text-3xl font-bold text-center text-slate-900 dark:text-slate-100 ">
+        <div className="flex justify-center relative mx-auto w-full rounded-2xl bg-white shadow-md ring-1 ring-black/5 dark:bg-slate-800 dark:ring-white/10 mb-12 min-h-36">
+          <h1 className="flex items-center mx-auto p-6 text-3xl font-bold text-center text-slate-900 dark:text-slate-100 ">
             {post.title}
           </h1>
-          <div className="relative w-full h-72 mb-4 ">
-            <Image
-              src={post.imageUrl}
-              alt={post.imageDescription}
-              fill={true}
-              priority={true}
-              className="object-scale-down transition-all duration-300 ease-in-out rounded-2xl hover:rounded-lg "
-            />
-          </div>
         </div>
         {/* Pass filtered services to client-side component */}
         <ClientPostPage servicesByCategory={servicesByCategory} categories={categories} />

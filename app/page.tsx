@@ -43,6 +43,7 @@ const HomePage = async () => (
             <span className="text-balance text-lg leading-8 text-slate-600 dark:text-slate-500">
               {homePageConfig.subTitle}
             </span>
+          <div  className="mb-5">
           </div>
           {projectPageConfig.map((project, idx) => (
             <ProjectItem
@@ -50,6 +51,7 @@ const HomePage = async () => (
             isLastItem={idx === projectPageConfig.length - 1}
             />
           ))}
+          </div>
           <HomePosts />
         </Main>
       </MainGrid>

@@ -7,13 +7,12 @@
 
 .post {
   margin-bottom: 50px;
-  /* Added space between posts */
+  margin-top: 80px;
   padding: 30px;
   border: 1px solid #eaeaea;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow for better aesthetics */
 }
 
 .post_title {
@@ -26,14 +25,12 @@
 
 .post_body {
   font-size: 1.125em;
-  /* Slightly larger body text */
   padding-left: 20px;
   line-height: 1.6;
   text-align: justify;
   color: #555;
 }
 
-/* Make sure the content is responsive */
 @media (max-width: 768px) {
   .home-posts {
     padding: 15px;

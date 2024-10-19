@@ -1,12 +1,9 @@
-import { formatDate } from "@/lib/utils";
 import { ProjectItemType } from "@/types";
 import { FC } from "react";
 import { v4 } from "uuid";
 import ProjectItemBrowser from "./project-item-browser";
 import ProjectItemContainer from "./project-item-container";
-import ProjectItemDate from "./project-item-date";
 import ProjectItemHeader from "./project-item-header";
-import ProjectItemScreenShot from "./project-item-screenshot";
 import ProjectItemTechStacks from "./project-item-tech-stacks";
 import ProjectItemVerticalLine from "./project-item-vertical-line";
 
@@ -33,7 +30,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project, isLastItem }) => {
                   project.iconDescription ? project.iconDescription : ""
                 }
               />
-              <ProjectItemTechStacks techStacks={project.techStacks} />
+              <ProjectItemTechStacks  techStacks={project.techStacks} />
             </div>
         <div className="flex flex-col items-center justify-center space-y-8 bg-[#0e2c47] p-6 rounded-lg shadow-md md:space-y-12">
           {/* First Item - Clock Icon (same as before) */}

@@ -1,5 +1,3 @@
-import { ProjectItemType } from "@/types";
-
 const projectPageConfig: ProjectItemType[] = [
   {
     title: "",
@@ -8,22 +6,24 @@ const projectPageConfig: ProjectItemType[] = [
     screenShotUrl: "/images/projects/ourjob.jpg",
     screenShotDescription: "Radio",
     type: "Radio",
-    keywords: ["Repairs", "Analysis", "Installation"],
+    keywords: ["Your Trusted Telecom Partner"],
     techStacks: [
       {
-        title: "Services",
-        stacks: ["Maintenance", "router", "Server"],
-      },
-      {
-        title: "Sulgon",
+        title: "Maintenance, Router, Server",
         stacks: [
-          "iQTEL – Connecting You with Reliability, Expertise, and Innovation."
+          "We provide expert maintenance and support for routers and servers, ensuring your systems run smoothly."
         ],
       },
       {
-        title: "Isp List",
+        title: "Reliability and Innovation",
         stacks: [
-          "Click to See our Isp List (Temproary disable)"
+          "Connecting homes and businesses with dependable telecommunication solutions for over 15 years."
+        ],
+      },
+      {
+        title: "ISP List",
+        stacks: [
+          "<a href='/isp' class='text-blue-500 font-bold underline hover:text-blue-600'>Click To See ISP List</a>",
         ],
       },
     ],

@@ -64,7 +64,6 @@ const ContactForm = () => {
   }
 
   async function onSubmit(data: ContactFormValues) {
-    console.log(data)
     try {
       setIsLoading(true)
       const response = await fetch("/api/contact", {
@@ -99,109 +98,114 @@ const ContactForm = () => {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="mx-auto space-y-4 text-center">
           {/* Category Field */}
-          <FormField
-            control={form.control}
-            name="category"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Category</FormLabel>
-                <div className="mx-auto flex w-full max-w-md space-x-2">
-                  <FormControl>
-                    <select 
-                      {...field}
-                      className="form-select block w-full rounded-md border border-gray-300 px-3 py-2"
-                      onChange={(e) => {
-                        field.onChange(e)
-                        handleCategoryChange(e.target.value) 
-                      }}
-                    >
-                      <option value="">Select a category</option>
-                      {posts.map((post) => (
-                        <option key={post.id} value={post.title}>
-                          {post.title}
-                        </option>
-                      ))}
-                    </select>
-                  </FormControl>
-                </div>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          {/* Service Field */}
-          <FormField
-            control={form.control}
-            name="service"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Service</FormLabel>
-                <div className="mx-auto flex w-full max-w-md space-x-2">
-                  <FormControl>
-                    <select {...field} className="form-select block w-full rounded-md border border-gray-300 px-3 py-2">
-                      <option value="">Select a service</option>
-                      {availableServices.map((service) => (
-                        <option key={service.id} value={service.title}>
-                          {service.title}
-                        </option>
-                      ))}
-                      {/* Adding the 'Other' option */}
-                      <option value="other">Other</option>
-                    </select>
-                  </FormControl>
-                </div>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          {/* Name Field */}
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Name</FormLabel>
-                <div className="mx-auto flex w-full max-w-md space-x-2">
-                  <FormControl>
-                    <Input {...field} />
-                  </FormControl>
-                </div>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          {/* Email Field */}
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Email</FormLabel>
-                <div className="mx-auto flex w-full max-w-md space-x-2">
-                  <FormControl>
-                    <Input {...field} />
-                  </FormControl>
-                </div>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          {/* Message Field */}
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Message</FormLabel>
-                <div className="mx-auto flex w-full max-w-md space-x-2">
-                  <FormControl>
-                    <Textarea className="resize-none" {...field} />
-                  </FormControl>
-                </div>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          <div className="">
+            <table className="min-w-full max-w-lg border-collapse">
+              <tbody>
+                <tr >
+                  <td className="w-1/4 text-right pr-2 py-4">
+                    <FormLabel>Category</FormLabel>
+                  </td>
+                  <td className="w-3/4 py-4">
+                    <FormField
+                      control={form.control}
+                      name="category"
+                      render={({ field }) => (
+                        <FormControl>
+                          <select 
+                            {...field}
+                            className="form-select block w-full rounded-md border border-gray-300 px-3 py-2"
+                            onChange={(e) => {
+                              field.onChange(e);
+                              handleCategoryChange(e.target.value);
+                            }}
+                          >
+                            <option value="">Select a category</option>
+                            {posts.map((post) => (
+                              <option key={post.id} value={post.title}>
+                                {post.title}
+                              </option>
+                            ))}
+                          </select>
+                        </FormControl>
+                      )}
+                    />
+                  </td>
+                </tr>
+                <tr >
+                  <td className="w-1/4 text-right pr-2 py-4">
+                    <FormLabel>Service</FormLabel>
+                  </td>
+                  <td className="w-3/4 py-4">
+                    <FormField
+                      control={form.control}
+                      name="service"
+                      render={({ field }) => (
+                        <FormControl>
+                          <select {...field} className="form-select block w-full rounded-md border border-gray-300 px-3 py-2">
+                            <option value="">Select a service</option>
+                            {availableServices.map((service) => (
+                              <option key={service.id} value={service.title}>
+                                {service.title}
+                              </option>
+                            ))}
+                            <option value="other">Other</option>
+                          </select>
+                        </FormControl>
+                      )}
+                    />
+                  </td>
+                </tr>
+                <tr >
+                  <td className="w-1/4 text-right pr-2 py-4">
+                    <FormLabel>Name</FormLabel>
+                  </td>
+                  <td className="w-3/4 py-4">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormControl>
+                          <Input {...field} className="block w-full rounded-md border border-gray-300 px-3 py-2" />
+                        </FormControl>
+                      )}
+                    />
+                  </td>
+                </tr>
+                <tr >
+                  <td className="w-1/4 text-right pr-2 py-4">
+                    <FormLabel>Email</FormLabel>
+                  </td>
+                  <td className="w-3/4 py-4">
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormControl>
+                          <Input {...field} className="block w-full rounded-md border border-gray-300 px-3 py-2" />
+                        </FormControl>
+                      )}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td className="w-1/4 text-right pr-2 py-4">
+                    <FormLabel>Message</FormLabel>
+                  </td>
+                  <td className="w-3/4 py-4">
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormControl>
+                          <Textarea className="resize-none block w-full rounded-md border border-gray-300 px-3 py-2" {...field} />
+                        </FormControl>
+                      )}
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <Button type="submit" className="w-full max-w-sm">
             {isLoading && <SpinnerIcon className="mr-2 h-4 w-4 animate-spin" />}
             Send

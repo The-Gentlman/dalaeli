@@ -22,7 +22,7 @@ export default function ClientPostPage({
   return (
     <>
       {showTabs && (
-        <div className="mb-8">
+        <div className="mb-8 ">
           <div className="flex space-x-4 mb-4">
             {categories.map((category) => (
               <button
@@ -46,7 +46,7 @@ export default function ClientPostPage({
         {servicesByCategory[activeCategory].map((service) => (
           <div
             key={service.id}
-            className="my-6 p-4 border rounded-lg border-slate-200 dark:border-slate-700 shadow-md flex items-center hover:scale-110 hover:shadow-xl transition-transform duration-300 ease-in-out"
+            className="my-6 p-4 border rounded-lg border-slate-200 dark:border-slate-700 shadow-md flex items-center hover:scale-110 hover:shadow-xl transition-transform duration-300 ease-in-out bg-white"
           >
             <div className="sticky w-20 h-20 mr-4 flex-shrink-0 flex justify-center items-center">
               <Image
