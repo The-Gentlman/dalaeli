@@ -1,6 +1,6 @@
 const homePageConfig = {
   title: "",
-  subTitle: "iQTEL – Connecting You with Reliability, Expertise, and Innovation.",
+  subTitle: "IQTEL – Connecting You with Reliability, Expertise, and Innovation.",
   profileImage: "/images/authors/logo.png",
   profileImageDescription: "https://mrtelco.com/isp-list",
 };

@@ -1,4 +1,3 @@
-// components/HomePosts.tsx
 import Homeposts from "@/config/Homeposts";
 import { HomePostType } from "@/types";
 import styles from "../styles/HomePosts.module.css";
