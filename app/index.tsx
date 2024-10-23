@@ -1,15 +1,12 @@
-import { Layout } from "antd";
 import { ReactNode } from "react";
 import { TransitionComponent } from "./Transition";
 import dynamic from "next/dynamic";
+import Layout from "./layout";
 
 const Navbar = dynamic(() => import("./navbar"), {
     ssr: false,
 });
 
-const Footer = dynamic(() => import("./footer"), {
-    ssr: false,
-});
 
 type Props = {
     children: ReactNode;
@@ -23,7 +20,6 @@ const RootLayout = ({ children, navbar = true, footer = true }: Props) => {
             <Layout>
                 {navbar && <Navbar />}
                 <main>{children}</main>
-                {footer && <Footer />}
                 <Navbar />
             </Layout>
         </TransitionComponent>

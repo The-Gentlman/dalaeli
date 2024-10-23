@@ -23,7 +23,7 @@ const MainHeader = () => {
               </div>
               <div>
                 <div className="hidden gap-x-6 sm:flex sm:flex-1">
-                  <DesktopNav menus={menus} />
+                  <DesktopNav menus={menus} phoneNumber={"+61 402216671"} />
               </div>
               </div>
                 <div className="flex flex-1 justify-end pr-2 md:hidden">

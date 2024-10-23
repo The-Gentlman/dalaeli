@@ -1,30 +1,26 @@
 import { posts } from "@/config";
 import { constructOgImageUri, getUrl } from "@/lib/utils";
 import { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import ClientPostPage from "@/components/services/ClientPostPage";
 
-interface PostPageProps {
-  params: {
-    slug: string[];
-  };
+interface PostPageParams {
+  slug: string[];
 }
 
-async function getPostFromParams(params: { slug: string[] }) {
+
+async function getPostFromParams(params: PostPageParams) {
   const slug = params?.slug?.join("/");
   const post = posts.find((post) => post.slug === slug);
 
-  if (!post) {
-    null;
-  }
-
-  return post;
+  return post || null;
 }
 
 export async function generateMetadata({
   params,
-}: PostPageProps): Promise<Metadata> {
+}: {
+  params: PostPageParams;
+}): Promise<Metadata> {
   const post = await getPostFromParams(params);
 
   if (!post) {
@@ -42,10 +38,10 @@ export async function generateMetadata({
       images: [
         {
           url: constructOgImageUri(
-            post.description ? post.description : post.title,
+            post.description || post.title,
             post.title,
             post.tags,
-            post.slug,
+            post.slug
           ),
           width: 1200,
           height: 630,
@@ -57,13 +53,15 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams(): Promise<
-  PostPageProps["params"][]
+  { params: PostPageParams }[]
 > {
   return posts.map((post) => ({
-    slug: post.slug.split("/"),
+    params: { slug: post.slug.split("/") },
   }));
 }
-export default async function PostPage({ params }: PostPageProps) {
+
+// Adjusted PostPage function signature
+export default async function PostPage({ params }: { params: PostPageParams }) {
   const post = await getPostFromParams(params);
 
   if (!post) {
@@ -97,7 +95,6 @@ export default async function PostPage({ params }: PostPageProps) {
             {post.title}
           </h1>
         </div>
-        {/* Pass filtered services to client-side component */}
         <ClientPostPage servicesByCategory={servicesByCategory} categories={categories} />
       </div>
     </div>

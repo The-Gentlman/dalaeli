@@ -16,7 +16,8 @@ import { useForm } from "react-hook-form"
 import { toast } from "react-hot-toast"
 import * as z from "zod"
 import posts from "@/config/posts"
-import { servicesType1, servicesType2 } from "@/config/services"
+import { servicesType1, servicesType2 } from "@/config/services";
+import { Services } from "@/types";
 
 const contactFormSchema = z.object({
   name: z.string().min(3, { message: "Your name must be at least 3 characters." }),
@@ -40,7 +41,7 @@ const defaultValues: Partial<ContactFormValues> = {
 
 const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false)
-  const [availableServices, setAvailableServices] = useState<Services[]>([])
+  const [availableServices, setAvailableServices] = useState<Services[]>([]);
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),

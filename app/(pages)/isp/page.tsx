@@ -44,12 +44,15 @@ export default function ExcelTable() {
                 const workbook = XLSX.read(data, { type: 'array' });
                 const sheetName = workbook.SheetNames[0];
                 const sheet = workbook.Sheets[sheetName];
-                const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 
-                setTableData(jsonData);
-            } catch (err) {
+                // Specify the type of jsonData as string[][]
+                const jsonData = XLSX.utils.sheet_to_json<string[]>(sheet, { header: 1 });
+
+                // Cast jsonData to string[][]
+                setTableData(jsonData as string[][]);
+            } catch (err: any) {
                 console.error('Error reading XLSX file:', err);
-                setError(err.message);
+                setError(err.message || 'Unknown error');
             }
         };
 

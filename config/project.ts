@@ -1,3 +1,5 @@
+import { ProjectItemType } from "@/types";
+
 const projectPageConfig: ProjectItemType[] = [
   {
     title: "",
