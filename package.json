@@ -3,9 +3,9 @@
   "version": "1.0.2",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production npm --scripts-prepend-node-path=auto run server.js",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint",
     "debug": "NODE_OPTIONS='--inspect' next dev"
   },
