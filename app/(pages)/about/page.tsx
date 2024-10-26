@@ -3,7 +3,7 @@ import { constructOgImageUri, getUrl } from "@/lib/utils";
 import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
-import { v4 } from "uuid";
+import { v4 as uuidv4 } from 'uuid';
 
 export const metadata: Metadata = {
   title: "About",
@@ -55,18 +55,18 @@ const AboutPage = async () => {
             {aboutPageConfig.profileImageCaption}
           </figcaption>
         </div>
-        <div className="relative mx-auto max-w-3xl px-6">
-          {aboutPageConfig.content.map((section) => (
-            <div id={v4()} className="mt-5">
-              <div className="scroll-m-20 border-b pb-1 text-3xl font-semibold tracking-tight first:mt-0">
-                {section.title}
+          <div className="relative mx-auto max-w-3xl px-6">
+            {aboutPageConfig.content.map((section) => (
+              <div key={uuidv4()} className="mt-5">
+                <div className="scroll-m-20 border-b pb-1 text-3xl font-semibold tracking-tight first:mt-0">
+                  {section.title}
+                </div>
+                <div className="mt-4 text-wrap text-lg leading-8 text-slate-600 dark:text-slate-400 text-justify">
+                  {section.description}
+                </div>
               </div>
-              <div className="mt-4 text-wrap text-lg leading-8 text-slate-600 dark:text-slate-400 text-justify">
-                {section.description}
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
       </div>
     </>
   );

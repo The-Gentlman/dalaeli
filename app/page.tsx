@@ -14,7 +14,7 @@ import Image from "next/image";
 import HeaderImage from '@/components/main/HeaderImage';
 import Logos from "@/components/main/Logos";
 import HomePosts from "@/components/main/HomePosts";
-const HomePage = async () => (
+const HomePage = () => (
     <>
     <MainHeader />
     <MainContainer>
@@ -47,6 +47,7 @@ const HomePage = async () => (
           </div>
           {projectPageConfig.map((project, idx) => (
             <ProjectItem
+            key={project.title}
             project={project}
             isLastItem={idx === projectPageConfig.length - 1}
             />

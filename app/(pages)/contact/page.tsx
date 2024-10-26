@@ -4,7 +4,7 @@ import ContactPageConfig from "@/config/contact";
 import { constructOgImageUri, getUrl } from "@/lib/utils";
 import { Metadata } from "next";
 import React from "react";
-import { v4 } from "uuid";
+import { v4 as uuidv4 } from 'uuid';
 
 export const metadata: Metadata = {
   title: "Contact us",
@@ -36,7 +36,7 @@ const ContactPage = () => {
     <>
       <div className="relative mx-auto max-w-3xl px-6">
         {ContactPageConfig.content.map((section) => (
-          <div id={v4()} className="mt-5">
+          <div key={uuidv4()} className="mt-5">
             <div className="scroll-m-20 border-b pb-1 text-3xl font-semibold tracking-tight first:mt-0">
               {section.title}
             </div>

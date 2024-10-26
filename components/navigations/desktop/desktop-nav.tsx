@@ -6,6 +6,7 @@ import { FC, useState } from "react";
 import { v4 } from "uuid";
 import { motion, AnimatePresence } from 'framer-motion';
 import React from "react";
+import Image from 'next/image';
 
 const Popup = ({ phoneNumber, onClose, isVisible }) => {
   return (
@@ -85,12 +86,15 @@ const DesktopNav: FC<DesktopNavProps> = ({ menus, phoneNumber }) => {
             <div className="relative">{title}</div>
           </Link>
         ))}
-        <img
-          src="/favicons/call-now.png"
-          className="ml-2 cursor-pointer h-9 w-9 transition-transform transform hover:scale-110"
-          onClick={() => setIsPopupOpen(true)}
-          alt="Call Icon"
-        />
+      <Image
+        src="/favicons/call-now.png"
+        alt="Call Icon"
+        width={36} 
+        height={36} 
+        className="ml-2 cursor-pointer h-9 w-9 transition-transform transform hover:scale-110"
+        onClick={() => setIsPopupOpen(true)}
+        priority
+      />
       </div>
 
       {isPopupOpen && (
