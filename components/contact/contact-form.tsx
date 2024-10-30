@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -80,7 +80,6 @@ const ContactForm = () => {
       })
       setIsLoading(false)
       form.reset()
-
       if (!response?.ok) {
         return toast.error("Failed to send email.")
       }

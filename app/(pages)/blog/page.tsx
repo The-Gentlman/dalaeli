@@ -1,7 +1,6 @@
 import { metaConfig, posts } from "@/config";
 import {
   constructOgImageUri,
-  formatDate,
   getUrl,
   shimmer,
   toBase64,

@@ -5,7 +5,6 @@ interface ProfileIconAttributes {
 }
 
 const ProfileIcon: FC<ProfileIconAttributes> = ({
-  className = "",
 }: ProfileIconAttributes) => {
   return (
     <svg

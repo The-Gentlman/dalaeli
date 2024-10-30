@@ -1,5 +1,5 @@
 import "@/styles/tailwind.css";
-import { MainWrapper, ThemeProvider } from "@/components/main";
+import { MainWrapper } from "@/components/main";
 import { metaConfig } from "@/config";
 import { cn, constructOgImageUri, getUrl } from "@/lib/utils";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";

@@ -25,7 +25,6 @@ const TextToggle = ({ text, limit = 50 }) => {
         </span>
     );
 };
-
 export default function ExcelTable() {
     const [tableData, setTableData] = useState<string[][]>([]);
     const [error, setError] = useState<string | null>(null);
@@ -45,14 +44,15 @@ export default function ExcelTable() {
                 const sheetName = workbook.SheetNames[0];
                 const sheet = workbook.Sheets[sheetName];
 
-                // Specify the type of jsonData as string[][]
                 const jsonData = XLSX.utils.sheet_to_json<string[]>(sheet, { header: 1 });
-
-                // Cast jsonData to string[][]
                 setTableData(jsonData as string[][]);
-            } catch (err: any) {
+            } catch (err: unknown) {
                 console.error('Error reading XLSX file:', err);
-                setError(err.message || 'Unknown error');
+                if (err instanceof Error) {
+                    setError(err.message);
+                } else {
+                    setError('Unknown error');
+                }
             }
         };
 
@@ -63,11 +63,12 @@ export default function ExcelTable() {
         return <div className="text-red-500">Error: {error}</div>;
     }
 
+
     const getFaviconUrl = (url) => {
         try {
             const baseUrl = new URL(url);
             return `https://logo.clearbit.com/${baseUrl.hostname}`;
-        } catch (error) {
+        } catch {
             return '';
         }
     };

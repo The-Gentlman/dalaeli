@@ -1,5 +1,4 @@
 import { Icon } from "@heroicons/react";
-import { ReadTimeResults } from "reading-time";
 
 type ProjectItemTechStack = {
   title: string;
