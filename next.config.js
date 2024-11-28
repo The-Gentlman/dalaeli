@@ -7,7 +7,7 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "www.iqtel.com.au",
-        pathname: '/images/**',
+        pathname: '/**',
       },
     ],
   },
