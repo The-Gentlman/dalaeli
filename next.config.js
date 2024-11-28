@@ -6,7 +6,8 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "images.unsplash.com",
+        hostname: "www.iqtel.com.au",
+        pathname: '/images/**',
       },
     ],
   },

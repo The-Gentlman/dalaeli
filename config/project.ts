@@ -2,6 +2,7 @@ import { ProjectItemType } from "@/types";
 
 const projectPageConfig: ProjectItemType[] = [
   {
+    id:1,
     title: "Radio",
     iconUrl: "/images/authors/logo.png",
     iconDescription: "Connected Radios",
