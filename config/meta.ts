@@ -2,7 +2,7 @@ import { MetaType } from "types";
 
 const metaConfig: MetaType = {
   title: "iQTEL",
-  ogTitle: "https://mrtelco.com/isp-list",
+  ogTitle: "https://iqtel.com.au",
   author: {
     name: "Mohammad Ali Foroozani",
   },
