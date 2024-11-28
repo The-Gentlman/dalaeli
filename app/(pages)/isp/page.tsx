@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 import { useEffect, useState } from 'react';
 import * as XLSX from 'xlsx';
@@ -20,10 +21,17 @@ const fetchData = async () => {
     const workbook = XLSX.read(data, { type: 'array' });
     const sheetName = workbook.SheetNames[0]; // Get the first sheet
     const sheet = workbook.Sheets[sheetName];
-    const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 }); // Convert to JSON format
+    
+    // Convert the sheet to JSON format, where `header: 1` means the first row is used as column headers
+    const jsonData: unknown[] = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 
-    setTableData(jsonData);
-    } catch (err) {
+    // Convert the rows into a 2D array of strings
+    const stringifiedData: string[][] = jsonData.map((row: any) =>
+        Object.values(row).map(String) // Convert each value to a string
+    );
+
+    setTableData(stringifiedData);
+    } catch (err: any) {
     console.error('Error reading XLSX file:', err);
     setError(err.message);
     }
@@ -40,7 +48,7 @@ return (
 <div>
     <h1>Data Table</h1>
     {tableData.length > 0 ? (
-    <table border="1">
+    <table>
         <thead>
         <tr>
             <th>ISP Logo</th>

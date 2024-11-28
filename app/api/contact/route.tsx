@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextRequest, NextResponse } from "next/server"
 import { Email } from "@/components/contact/"
 import { smtpEmail, transporter } from "@/lib/nodemailer"
@@ -6,10 +7,10 @@ import * as z from "zod"
 
 export async function POST(req: NextRequest, res: NextResponse) {
   const body = await req.json()
-  const { name, email, message } = body
+  const { name, email, message, categoty, service } = body  // Include category and service
 
   const emailHtml = render(
-    <Email name={name} email={email} message={message} />
+    <Email name={name} email={email} message={message} categoty={categoty} service={service} />
   )
 
   const options = {
@@ -20,7 +21,6 @@ export async function POST(req: NextRequest, res: NextResponse) {
   }
 
   try {
-    // Send email using the transporter
     const response = await transporter.sendMail(options)
     return new Response(null, { status: 200 })
   } catch (error) {
