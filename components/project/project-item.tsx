@@ -77,7 +77,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project, isLastItem }) => {
       </div>
       {/* Third Item - New Customer Icon */}
       <div className="flex flex-col items-center text-center space-y-2 group">
-        <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" width="80px" height="80px" viewBox="-10 -10 120.00 120.00" enable-background="new 0 0 100 100"  stroke="#000000" strokeWidth="0.6" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"
+        <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" width="80px" height="80px" viewBox="-10 -10 120.00 120.00" enableBackground="new 0 0 100 100"  stroke="#000000" strokeWidth="0.6" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"
         className="h-10 w-10 text-white group-hover:scale-125 transition-transform duration-300 ease-in-out"
         >
           <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>

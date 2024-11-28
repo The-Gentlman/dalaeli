@@ -1,95 +1,55 @@
-const { colors } = require("tailwindcss/colors")
-const { fontFamily } = require("tailwindcss/defaultTheme")
-
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./content/**/*.{md,mdx}",
+const defaultTheme = require("tailwindcss/defaultTheme");
 
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx}",
+module.exports = {
+  mode: "jit",
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class",
   theme: {
+    fontFamily: {
+      sans: ["Samim", ...defaultTheme.fontFamily.sans],
+      serif: ["Samim", ...defaultTheme.fontFamily.serif],
+      mono: ["Samim", ...defaultTheme.fontFamily.mono],
+      fd: ["Samim-FD", ...defaultTheme.fontFamily.mono],
+    },
     extend: {
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
-        calsans: ["var(--font-calsans)"],
-      },
-      boxShadow: {
-        "t-sm": "0 -1px 2px 0 rgba(0, 0, 0, 0.05)",
-        "t-md":
-          "0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-        "t-lg":
-          "0 -10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-        "t-xl":
-          "0 -20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-        "t-2xl": "0 -25px 50px -12px rgba(0, 0, 0, 0.25)",
-        "t-3xl": "0 -35px 60px -15px rgba(0, 0, 0, 0.3)",
+      fontSize: {
+        xxs: ["0.625rem", "0.75rem"],
       },
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+        blue: { 500: "#0717a8", 600: "#01094c" },
+        primary: "#F1884D",
+        "gray-1": "#F6F6F6",
+        "gray-l-1": "#F6F6F6",
+        "gray-l-2": "#E6E6E6",
+        "gray-l-3": "#D6D6D6",
+        "gray-d-2": "#747474",
+        "gray-d-3": "#ADADAD",
       },
-      borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
-        sm: "calc(var(--radius) - 4px)",
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      keyframes: {
-        "accordion-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
-        },
+      height: {
+        page: "calc(100vh - 6rem)",
+      },
+      lineHeight: {
+        4.5: "1.112rem",
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "spin-slow": "spin 5s linear infinite",
+      },
+      borderRadius: {
+        base: "10px",
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/aspect-ratio"),
-    require("@tailwindcss/container-queries"),
-  ],
-}
+  corePlugins: {
+    preflight: false,
+  },
+  important: true,
+};
