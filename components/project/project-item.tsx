@@ -1,12 +1,9 @@
-import { formatDate } from "@/lib/utils";
 import { ProjectItemType } from "@/types";
 import { FC } from "react";
 import { v4 } from "uuid";
 import ProjectItemBrowser from "./project-item-browser";
 import ProjectItemContainer from "./project-item-container";
-import ProjectItemDate from "./project-item-date";
 import ProjectItemHeader from "./project-item-header";
-import ProjectItemScreenShot from "./project-item-screenshot";
 import ProjectItemTechStacks from "./project-item-tech-stacks";
 import ProjectItemVerticalLine from "./project-item-vertical-line";
 
@@ -59,11 +56,11 @@ const ProjectItem: FC<ProjectItemProps> = ({ project, isLastItem }) => {
 
       {/* Second Item - New Router Icon */}
       <div className="flex flex-col items-center text-center space-y-2 group">
-        <svg width="80px" height="80px" viewBox="0 0 1024.00 1024.00" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" stroke-width="0.01024"
+        <svg width="80px" height="80px" viewBox="0 0 1024.00 1024.00" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" strokeWidth="0.01024"
         className="h-10 w-10 text-white group-hover:scale-125 transition-transform duration-300 ease-in-out"
         >
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+          <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
           <g id="SVGRepo_iconCarrier">
             <path d="M569.2 304c1-60-20.8-120.4-65.5-166.2 0 0-18.4-9.8-18.4 18.8 0 3.8 18.4 25.1 18.4 25.1 20.9 29.3 33.1 63.2 36.6 97.7h-1c1.1 8.1 1.8 16.3 2 24.6-0.2 8.2-0.8 16.4-2 24.6h1c-3.4 34.6-15.6 68.4-36.6 97.7 0 0-18.4 21.3-18.4 25.1 0 28.7 18.4 18.8 18.4 18.8 44.7-45.8 66.5-106.2 65.5-166.2z" fill="#000000"></path>
             <path d="M456.8 399.2c-3.8 5.2-7.9 10.3-12.4 15.1 0 0-14.5 9.1-15-15.9-0.2-12.7 15-33.5 15-33.5 6-12 9.9-24.9 11.8-38.1h-1.9c1.7-7.5 2.7-15.1 3-22.8-0.3-7.7-1.3-15.3-3-22.8h1.9c-1.8-13.2-5.8-26.1-11.8-38.1 0 0-15.2-20.7-15-33.5 0.5-25 15-15.9 15-15.9 4.5 4.8 8.7 9.8 12.4 15.1 20.1 27.9 29.6 61.7 28.4 95.2 1.1 33.5-8.4 67.2-28.4 95.2zM121.7 304c-1-60 20.8-120.4 65.5-166.2 0 0 18.4-9.8 18.4 18.8 0 3.8-18.4 25.1-18.4 25.1-20.9 29.3-33.1 63.2-36.6 97.7h1c-1.1 8.1-1.8 16.3-2 24.6 0.2 8.2 0.8 16.4 2 24.6h-1c3.4 34.6 15.6 68.4 36.6 97.7 0 0 18.4 21.3 18.4 25.1 0 28.7-18.4 18.8-18.4 18.8-44.7-45.8-66.5-106.2-65.5-166.2z" fill="#000000"></path>
@@ -80,11 +77,11 @@ const ProjectItem: FC<ProjectItemProps> = ({ project, isLastItem }) => {
       </div>
       {/* Third Item - New Customer Icon */}
       <div className="flex flex-col items-center text-center space-y-2 group">
-        <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" width="80px" height="80px" viewBox="-10 -10 120.00 120.00" enable-background="new 0 0 100 100"  stroke="#000000" stroke-width="0.6" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"
+        <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" width="80px" height="80px" viewBox="-10 -10 120.00 120.00" enableBackground="new 0 0 100 100"  stroke="#000000" strokeWidth="0.6" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"
         className="h-10 w-10 text-white group-hover:scale-125 transition-transform duration-300 ease-in-out"
         >
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.2"></g>
+          <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+          <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" stroke="#ffffff" strokeWidth="0.2"></g>
           <g id="SVGRepo_iconCarrier"> 
             <ellipse cx="41.3" cy="42.3" rx="12.2" ry="13.5"></ellipse> 
             <path d="M52.6,57.4c-3.1,2.8-7,4.5-11.3,4.5c-4.3,0-8.3-1.7-11.3-4.6c-5.5,2.5-11,5.7-11,10.7v2.1c0,2.5,2,4.5,4.5,4.5h35.7c2.5,0,4.5-2,4.5-4.5v-2.1C63.6,63,58.2,59.9,52.6,57.4z"></path> 
