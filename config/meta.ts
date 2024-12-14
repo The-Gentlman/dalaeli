@@ -4,11 +4,11 @@ const metaConfig: MetaType = {
   title: "iQTEL",
   ogTitle: "https://iqtel.com.au",
   author: {
-    name: "Mohammad Ali Foroozani",
+    name: "Iqtel Website",
   },
   description:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-  tags: ["Tag-1", "Tag-2"],
+    "This Site Belongs to iqtel",
+  tags: ["iqtel", "Telecomunities"],
 };
 
 export default metaConfig;

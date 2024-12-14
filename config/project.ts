@@ -12,19 +12,19 @@ const projectPageConfig: ProjectItemType[] = [
     keywords: ["Repairs", "Analysis", "Installation"],
     techStacks: [
       {
-        title: "Others",
+        title: "Works",
         stacks: ["Maintenance", "router", "Server"],
       },
       {
-        title: "Others",
+        title: "Repairs",
         stacks: [
-          "some simple text to explain this others or something new.this is just a sample test for this area"
+          "We provide repairs and maintenance services for your radio."
         ],
       },
       {
-        title: "Others",
+        title: "Installation",
         stacks: [
-          "some simple text to explain this others or something new.this is just a sample test for this area"
+          "We install radio systems for businesses and homes."
         ],
       },
     ],

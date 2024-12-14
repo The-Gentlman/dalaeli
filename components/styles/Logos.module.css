@@ -12,7 +12,7 @@
 
 .scrollWrapper {
     display: inline-flex;
-    animation: scroll 30s linear infinite;
+    animation: scroll 500s linear infinite;
 }
 
 .logoWrapper {

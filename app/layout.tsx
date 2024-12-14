@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   description: metaConfig.description,
   referrer: "origin-when-cross-origin",
   keywords: [
-    "Foroozani",
+    "Iqtel",
     "radio",
     "australia",
     "au",
@@ -63,7 +63,6 @@ export const metadata: Metadata = {
     "Gigacomm",
     "Belong",
     "Internode",
-    "mrtelco",
     "Cabling",
     "Internet",
     "NBN",

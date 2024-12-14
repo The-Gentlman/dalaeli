@@ -20,7 +20,7 @@ const logoFiles: string[] = [
 ];
 setLogos(logoFiles);
 }, []);
-const duplicatedLogos = [...logos, ...logos];
+const duplicatedLogos = [...logos, ...logos,...logos,...logos,...logos];
 return (
 <div className={styles.logosContainer}>
     <div className={styles.scrollWrapper}>
