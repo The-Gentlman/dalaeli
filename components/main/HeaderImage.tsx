@@ -1,5 +1,5 @@
 'use client';
-// components/HeaderImage.tsx
+
 import Image from 'next/image';
 import styles from '../styles/HeaderImage.module.css';
 

@@ -1,22 +1,17 @@
-import { NextRequest, NextResponse } from "next/server";
-import { Email } from "@/components/contact/";
-import { smtpEmail, transporter } from "@/lib/nodemailer";
-import { render } from "@react-email/components";
-import * as z from "zod";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { NextRequest, NextResponse } from "next/server"
+import { Email } from "@/components/contact/"
+import { smtpEmail, transporter } from "@/lib/nodemailer"
+import { render } from "@react-email/components"
+import * as z from "zod"
 
-export async function POST(req: NextRequest) {
-  const body = await req.json();
-  const { name, email, message, category, service } = body;
+export async function POST(req: NextRequest, res: NextResponse) {
+  const body = await req.json()
+  const { name, email, message, categoty, service } = body  // Include category and service
 
   const emailHtml = render(
-    <Email 
-      name={name} 
-      email={email} 
-      message={message} 
-      category={category}  
-      service={service}    
-    />
-  );
+    <Email name={name} email={email} message={message} categoty={categoty} service={service} />
+  )
 
   const options = {
     from: smtpEmail,
@@ -26,8 +21,8 @@ export async function POST(req: NextRequest) {
   };
 
   try {
-    await transporter.sendMail(options);
-    return NextResponse.json({ message: "Email sent successfully!" }, { status: 200 });
+    const response = await transporter.sendMail(options)
+    return new Response(null, { status: 200 })
   } catch (error) {
     console.error("Failed to send email:", error);
     if (error instanceof z.ZodError) {

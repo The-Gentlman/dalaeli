@@ -14,7 +14,7 @@ type Props = {
     footer?: boolean;
 };
 
-const RootLayout = ({ children, navbar = true, footer = true }: Props) => {
+const RootLayout = ({ children, navbar = true }: Props) => {
     return (
         <TransitionComponent>
             <Layout>

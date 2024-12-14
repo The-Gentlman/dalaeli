@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
 import { useState } from "react"
@@ -16,8 +17,8 @@ import { useForm } from "react-hook-form"
 import { toast } from "react-hot-toast"
 import * as z from "zod"
 import posts from "@/config/posts"
-import { servicesType1, servicesType2 } from "@/config/services";
-import { Services } from "@/types";
+import { servicesType1, servicesType2 } from "@/config/services"
+import { Services } from "@/types"
 
 const contactFormSchema = z.object({
   name: z.string().min(3, { message: "Your name must be at least 3 characters." }),

@@ -1,11 +1,7 @@
 prod/run:
-	@echo "Destroying Production server"
-	@docker rm -f dalaeli-client-prod
-	
-	@echo "Deploying the dalaeli Client in a production environment"
-	@docker build -t dalaeli-client-prod .
-
-
-prod/down:
-	@echo "Destroying Production server"
-	@docker rm -f dalaeli-client-prod
+	@echo "Building the product environment..."
+	@docker rm -f dalaeli-product
+	@echo "Building the Docker image..."
+	@docker build -t dalaeli-product .
+	@echo "Starting the product environment..."
+	@docker run -p 3000:3000 dalaeli-product:latest

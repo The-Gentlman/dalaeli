@@ -2,7 +2,8 @@ import { ProjectItemType } from "@/types";
 
 const projectPageConfig: ProjectItemType[] = [
   {
-    title: "",
+    id:1,
+    title: "Radio",
     iconUrl: "/images/authors/logo.png",
     iconDescription: "Connected Radios",
     screenShotUrl: "/images/projects/ourjob.jpg",
@@ -11,21 +12,19 @@ const projectPageConfig: ProjectItemType[] = [
     keywords: ["Your Trusted Telecom Partner"],
     techStacks: [
       {
-        title: "Maintenance, Router, Server",
+        title: "Works",
+        stacks: ["Maintenance", "router", "Server"],
+      },
+      {
+        title: "Repairs",
         stacks: [
-          "We provide expert maintenance and support for routers and servers, ensuring your systems run smoothly."
+          "We provide repairs and maintenance services for your radio."
         ],
       },
       {
-        title: "Reliability and Innovation",
+        title: "Installation",
         stacks: [
-          "Connecting homes and businesses with dependable telecommunication solutions for over 15 years."
-        ],
-      },
-      {
-        title: "ISP List",
-        stacks: [
-          "<a href='/isp' class='text-blue-500 font-bold underline hover:text-blue-600'>Click To See ISP List</a>",
+          "We install radio systems for businesses and homes."
         ],
       },
     ],

@@ -6,6 +6,7 @@ type ProjectItemTechStack = {
 };
 
 export type ProjectItemType = {
+  id : number;
   title: string;
   iconUrl: string;
   iconDescription: string;

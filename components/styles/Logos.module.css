@@ -10,11 +10,8 @@
 }
 
 .scrollWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: max-content; /* Dynamically adjust width to content */
-    animation: scroll 60s linear infinite; /* Adjusted slower scroll */
+    display: inline-flex;
+    animation: scroll 500s linear infinite;
 }
 
 .logoWrapper {
