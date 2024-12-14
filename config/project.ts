@@ -9,22 +9,22 @@ const projectPageConfig: ProjectItemType[] = [
     screenShotUrl: "/images/projects/ourjob.jpg",
     screenShotDescription: "Radio",
     type: "Radio",
-    keywords: ["Your Trusted Telecom Partner"],
+    keywords: ["Repairs", "Analysis", "Installation"],
     techStacks: [
       {
-        title: "Works",
+        title: "Services",
         stacks: ["Maintenance", "router", "Server"],
       },
       {
-        title: "Repairs",
+        title: "Sulgon",
         stacks: [
-          "We provide repairs and maintenance services for your radio."
+          "iQTEL – Connecting You with Reliability, Expertise, and Innovation."
         ],
       },
       {
-        title: "Installation",
+        title: "Isp List",
         stacks: [
-          "We install radio systems for businesses and homes."
+          '<a href="/isp" className="text-blue-500">Click to See our Isp List</a>'
         ],
       },
     ],

@@ -1,7 +1,9 @@
+BUILD_NAME ?= dalaeli-product
+
 prod/run:
-	@echo "Building the product environment..."
-	@docker rm -f dalaeli-product
-	@echo "Building the Docker image..."
-	@docker build -t dalaeli-product .
+	@echo "Stopping and removing the last running container..."
+	@docker ps -q --filter "name=$(BUILD_NAME)" | xargs -r docker stop | xargs -r docker rm
+	@echo "Building the Docker image with name $(BUILD_NAME)..."
+	@docker build -t $(BUILD_NAME):latest .
 	@echo "Starting the product environment..."
-	@docker run -p 3000:3000 dalaeli-product:latest
+	@docker run --name $(BUILD_NAME) -p 3000:3000 -d $(BUILD_NAME):latest

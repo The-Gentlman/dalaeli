@@ -10,7 +10,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
   const { name, email, message, categoty, service } = body  // Include category and service
 
   const emailHtml = render(
-    <Email name={name} email={email} message={message} categoty={categoty} service={service} />
+    <Email name={name} email={email} message={message} category={categoty} service={service} />
   )
 
   const options = {
